@@ -14,6 +14,12 @@ describe('Mocha Tests', function() {
       assert.equal(13.89, cart.total());
     });
 
+    it('It should show a total price of $8.94 for 1 apples and 1 orange added in a shopping cart', function() {
+      const cart = new ShoppingCart ();
+      cart.addProduct(orange,1);
+      cart.addProduct (apple,1);
+      assert.equal(8.940000000000001, cart.total());
+    });
 
     it('It should show a total price of $9.9 after adding 3 apples and removing 1 apple in a new shopping cart', function() {
       const cart_two = new ShoppingCart ();
